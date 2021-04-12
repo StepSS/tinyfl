@@ -1,31 +1,28 @@
 # tinyfl
-This is a DIY Attiny13-based PWM driver for flashlights with bright LEDs, such as CREE XM-L, XP-G and others.
+Это DIY Attiny13 на базе PWM-драйвера для фонариков с яркими светодиодами, такими как Cree XM-L, XP-G и другие.
 
-Capabilities and benefits:
+Возможности и преимущества:
 
-- ON/OFF with a single button click (tact switch button).
-- Working voltage: 2.3V - 5.5V, 4A maximum current (with SI2323 mosfet).
-- Extremely low power consumption at moonlight mode: only 5mA with XM-L led. With standart 18650 cell it will shine more than 20 days.
-- Stepless brightness adjustment with gamma-correction, from moonlight to turbo. Brightness level is remembered until shutdown, and is preserved in sleep mode.
-- Battery voltage control with auto power-off when battery is discharged (2.7V is the default voltage cut-off).
-- Two additional modes - emergency beacon and strobe. Additional LED for backlighting.
-- Reverse polarity protection and ESD protection.
+    Вкл / выкл с одной кнопкой нажмите (кнопка TACT STACK).
+    Рабочее напряжение: 2,3 В - 5,5 В, максимальный ток 4А (с помощью Si2323 MoSfet).
+    Чрезвычайно низкое энергопотребление в режиме лунного света: только 5 мА с XM-L светодиодным. С помощью Standart 18650 ячейки он будет сиять более 20 дней.
+    Бесступенчатая регулировка яркости с гамма-коррекцией, от лунного света до турбо. Уровень яркости запоминается до завершения отключения и сохраняется в режиме сна.
+    Управление напряжением аккумулятора с автоматическим отключением при выключении батареи (2,7 В - это отключение напряжения по умолчанию).
+    Два дополнительных режима - аварийный маяк и строб. Дополнительные светодиоды для подсветки.
+    Обратная защита от полярности и защита ОУР.
 
-How to make it:
+Как это сделать:
 
-Firmware
+Прошивка
 
-For firmware modification you will need to install Arduino IDE with Attiny13 support or Atmel Studio. You can set up all working parameters just by editing definitions in .h file. 
-Or you can flash .hex file with default parameters. For firmware upload you will need Arduino or any ISP programmer, such as USBASP. 
-Don't forget to flash Attiny fuses at first (combinations can be found in .h file).
+Для модификации прошивки вам нужно будет установить arduino IDE с поддержкой Attiny13 или Studio Atmel. Вы можете настроить все рабочие параметры, просто редактирующие определения в файле .h. Или вы можете прошить файл .hex с параметрами по умолчанию. Для загрузки прошивки вам понадобится Arduino или любой программатор ISP, например, USBASP. Не забудьте прошить сначала фьюзы (комбинации можно найти в файле .h).
 
-Hardware
+Аппаратное обеспечение
 
-All PCB files, schemes and gerbers can be found [within latest release](https://github.com/madcatdev/tinyfl/releases).
-You can make the PCB at home because its layout is based off DIY technologies, such as photoresist. The Pattern for this can be found in the .pdf file. 
-In this case, bottom copper layer is not required, you can make a single-layer PCB with only 3 copper-wired vias on the bottom. 
-Or You can order those [PCBs from China here](https://www.pcbway.com/project/shareproject/TinyFL_LED_Driver.html)
+Все файлы PCB, схемы и гербер можно найти в последнем выпуске(https://github.com/madcatdev/tinyfl/releases).
+ Вы можете сделать PCB дома, потому что его расположение основана на DIY Technologies, таких как фоторезист. Шаблон для этого можно найти в файле .pdf. В этом случае нижний медный слой не требуется, вы можете сделать однослойную печатную плату только с 3 проводным соединением на дне. 
+Или вы можете заказать эти печатные платы из Китая здесь (https://www.pcbway.com/project/shareproject/TinyFL_LED_Driver.html)
 
-You will also need some soldering skills in order to solder it. For firmware uploading you can use an SOIC-8 Test Clip or you can directly solder thin wires to Attiny pads and connect them to a programmer.
+Вам также понадобится несколько навыков пайки, чтобы припаять его. Для загрузки прошивки вы можете использовать тестовый клип SOIC-8 или вы можете непосредственно припаять тонкие провода к накладкам и подключить их к программастру.
 
-Detailed project description and history of creation [is here (in Russian)](https://habr.com/ru/post/464673/)
+Подробное описание проекта и история творения здесь (на русском языке) (https://habr.com/ru/post/464673/)
